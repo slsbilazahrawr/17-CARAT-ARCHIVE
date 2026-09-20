@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Become a CARAT — Welcome to SEVENTEEN World 💎</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- BACKGROUND DEKORATIF ORB BERPENDAR -->
+  <div class="bg-glow orb-1"></div>
+  <div class="bg-glow orb-2"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo"><span class="gem">💎</span>17 CARAT ARCHIVE</div>
+    <nav class="nav-links">
+      <a href="#home" class="nav-link active">Overview</a>
+      <a href="#why-svt" class="nav-link">SVT?</a>
+      <a href="#match" class="nav-link">Roll Dice</a>
+      <a href="#songs" class="nav-link">Top Songs</a>
+      <a href="#members" class="nav-link">Members</a>
+      <a href="#gose" class="nav-link">Must Watch</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero-section">
+    <div class="hero-wrapper">
+      <div class="hero-text-side">
+        <div class="badge">WELCOME TO THE CARAT LIFE</div>
+        <h1 class="hero-title">Step Into The World Of <br><span class="highlight">SEVENTEEN!</span></h1>
+        <p class="hero-desc">Not just another K-pop boy group. Seventeen is an extraordinary group with 13 unique members. They also create their own songs, choreography, and even music videos.</p>
+        
+        <div class="hero-actions">
+          <a href="#match" class="btn btn-gradient">
+            <span>🎲 Acak Member Match Kamu</span>
+          </a>
+          <a href="#why-svt" class="btn btn-outline">Kenapa Harus CARAT?</a>
+        </div>
+      </div>
+
+      <!-- VISUAL BANNER: SPOT FOTO FULL MEMBER -->
+      <div class="hero-visual-side">
+        <div class="hero-full-card">
+          <div class="full-image-container">
+      
+            <img id="hero-full-img" src="images/fm.jpg" alt="SEVENTEEN Full Member Group Photo" onerror="this.src='https://via.placeholder.com/600x400/181A26/F7CAC9?text=MASUKKAN+FOTO+FULL+MEMBER+DISINI'">
+            <div class="full-overlay">
+              <span class="full-title">13 Members, 1 Heart 💎</span>
+              <p>S.Coups • Jeonghan • Joshua • Jun • Hoshi • Wonwoo • Woozi • The8 • Mingyu • DK • Seungkwan • Vernon • Dino</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: WHY YOU SHOULD JOIN -->
+  <section id="why-svt" class="section-container">
+    <div class="section-header center">
+      <span class="sub-tag">THE REASONS</span>
+      <h2>Kenapa Kamu Bakal Suka SEVENTEEN?</h2>
+    </div>
+
+    <div class="reasons-grid">
+      <div class="reason-card">
+        <div class="reason-icon">🎼</div>
+        <h3>Self-Producing Idols</h3>
+        <p>Hampir semua lagu diciptakan oleh Woozi dan koreografi dibuat oleh Hoshi. Musik mereka murni karya dan perasaan mereka sendiri!</p>
+      </div>
+
+      <div class="reason-card">
+        <div class="reason-icon">🤣</div>
+        <h3>Komedian Berkedok Idol</h3>
+        <p>Tontonan mereka (Going Seventeen) disukai bahkan oleh non-fans karena kekonyolan dan kekeluargaan mereka yang naturally funny.</p>
+      </div>
+
+      <div class="reason-card">
+        <div class="reason-icon">⚡</div>
+        <h3>Koreografi Paling Kompak</h3>
+        <p>Dikenal sebagai "Synchronization Kings". Gerakan 13 orang bisa sangat presisi dan enerjik.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: INTERACTIVE DICE MATCHMAKER -->
+  <section id="match" class="section-container">
+    <div class="dice-box">
+      <span class="sub-tag">CARAT MATCHMAKER</span>
+      <h2>Random BIAS for you! 🎲</h2>
+      <p>Tekan tombol atau klik dadu di bawah ini untuk mengacak member yang ditakdirkan cocok sama kamu!</p>
+
+      <div class="dice-wrapper">
+        <div id="dice-element" class="dice-icon" onclick="rollDiceMatch()">🎲</div>
+        <button class="btn btn-gradient" onclick="rollDiceMatch()">Lempar Dadu Keberuntungan!</button>
+      </div>
+    </div>
+  </section>
+
+<!-- SECTION 3: TOP SONGS LIST WITH DIRECT AUDIO PLAYER -->
+  <section id="songs" class="section-container">
+    <div class="section-header">
+      <div>
+        <span class="sub-tag">DISCOGRAPHY</span>
+        <h2>Lagu-Lagu Wajib Masuk Playlist 🎧</h2>
+      </div>
+    </div>
+
+    <div class="songs-grid">
+      <!-- 1. ROCK WITH YOU -->
+      <div class="song-card">
+        <div class="song-header">
+          <span class="song-icon">🎸</span>
+          <div class="song-info">
+            <h3>Rock with you</h3>
+            <p>Lagu rock-pop berenergi tinggi tentang cinta yang menggebu dan tak terbatas.</p>
+          </div>
+        </div>
+        <!-- PENTING: Simpan file audio mp3 di folder 'audio/rock-with-you.mp3' -->
+        <audio controls class="audio-player">
+          <source src="audio/rock-with-you.mp3" type="audio/mpeg">
+          Browser kamu tidak mendukung pemutar audio.
+        </audio>
+      </div>
+
+      <!-- 2. HOT -->
+      <div class="song-card">
+        <div class="song-header">
+          <span class="song-icon">❤️‍🔥</span>
+          <div class="song-info">
+            <h3>HOT</h3>
+            <p>Lagu hip-hop perkusi yang membara tentang ambisi SEVENTEEN untuk menjadi matahari.</p>
+          </div>
+        </div>
+        <audio controls class="audio-player">
+          <source src="audio/hot.mp3" type="audio/mpeg">
+          Browser kamu tidak mendukung pemutar audio.
+        </audio>
+      </div>
+
+      <!-- 3. SUPER -->
+      <div class="song-card">
+        <div class="song-header">
+          <span class="song-icon">🔥</span>
+          <div class="song-info">
+            <h3>Super (손오공)</h3>
+            <p>Lagu bertema Super dengan koreografi megah ala kolosal.</p>
+          </div>
+        </div>
+        <audio controls class="audio-player">
+          <source src="audio/super.mp3" type="audio/mpeg">
+          Browser kamu tidak mendukung pemutar audio.
+        </audio>
+      </div>
+
+      <!-- 4. VERY NICE -->
+      <div class="song-card">
+        <div class="song-header">
+          <span class="song-icon">💖</span>
+          <div class="song-info">
+            <h3>VERY NICE (아주 NICE)</h3>
+            <p>Lagu paling ikonis dengan peningkat semangat tanpa batas di setiap konser!</p>
+          </div>
+        </div>
+        <audio controls class="audio-player">
+          <source src="audio/very-nice.mp3" type="audio/mpeg">
+          Browser kamu tidak mendukung pemutar audio.
+        </audio>
+      </div>
+
+      <!-- 5. DON'T WANNA CRY -->
+      <div class="song-card">
+        <div class="song-header">
+          <span class="song-icon">🌊</span>
+          <div class="song-info">
+            <h3>Don't Wanna Cry (울고 싶지 않아)</h3>
+            <p>Lagu emosional dengan koreografi kontemporer luar biasa indah.</p>
+          </div>
+        </div>
+        <audio controls class="audio-player">
+          <source src="audio/dont-wanna-cry.mp3" type="audio/mpeg">
+          Browser kamu tidak mendukung pemutar audio.
+        </audio>
+      </div>
+
+      <!-- 6. MAESTRO -->
+      <div class="song-card">
+        <div class="song-header">
+          <span class="song-icon">✨</span>
+          <div class="song-info">
+            <h3>MAESTRO</h3>
+            <p>Lagu berenergi tinggi tentang memimpin simfoni musik mereka sendiri.</p>
+          </div>
+        </div>
+        <audio controls class="audio-player">
+          <source src="audio/maestro.mp3" type="audio/mpeg">
+          Browser kamu tidak mendukung pemutar audio.
+        </audio>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: MEMBERS ARCHIVE -->
+  <section id="members" class="section-container">
+    <div class="section-header">
+      <div>
+        <span class="sub-tag">THE 13 JEWELS</span>
+        <h2>Kenali 13 Pesona Member</h2>
+      </div>
+      
+      <div class="filter-tabs">
+        <button class="tab-btn active" onclick="filterUnit('all', this)">All</button>
+        <button class="tab-btn" onclick="filterUnit('hiphop', this)">Hip-Hop</button>
+        <button class="tab-btn" onclick="filterUnit('vocal', this)">Vocal</button>
+        <button class="tab-btn" onclick="filterUnit('performance', this)">Performance</button>
+      </div>
+    </div>
+
+    <!-- GRID MEMBER -->
+    <div class="member-grid">
+      <!-- 1. S.COUPS -->
+      <div class="member-card hiphop" onclick="openDrawer('S.Coups', 'Choi Seungcheol', 'Hip-Hop Team (General Leader)', '8 Agustus 1995', '🍒', 'S.Coups adalah sosok leader sejati yang sangat protektif terhadap para member dan CARAT. Dia selalu menjadi benteng utama Seventeen, bertubuh atletis namun memiliki kecenderungan sikap clingy dan menggemaskan di luar panggung.', 'images/scoups.jpg')">
+        <div class="card-image">
+          <img src="images/scoups.jpg" alt="S.Coups">
+          <span class="unit-badge">Hip-Hop</span>
+        </div>
+        <div class="card-info">
+          <h3>S.Coups 🍒</h3>
+          <p>General Leader</p>
+        </div>
+      </div>
+
+      <!-- 2. JEONGHAN -->
+      <div class="member-card vocal" onclick="openDrawer('Jeonghan', 'Yoon Jeonghan', 'Vocal Team', '4 Oktober 1995', '😇', 'Dikenal sebagai Angel berparas menawan sekaligus mastermind paling kecerdasan di GoSe. Dialah yang sering merancang taktik licik nan menghibur di setiap game untuk memenangkan games.', 'images/jeonghan.jpg')">
+        <div class="card-image">
+          <img src="images/jeonghan.jpg" alt="Jeonghan">
+          <span class="unit-badge">Vocal</span>
+        </div>
+        <div class="card-info">
+          <h3>Jeonghan 😇</h3>
+          <p>The Angel Strategy</p>
+        </div>
+      </div>
+
+      <!--3. JOSHUA-->
+      <div class="member-card vocal" onclick="openDrawer('Joshua', 'Joshua Hong', 'Vocal Team', '30 Desember 1995', '🐰', 'Lahir dan besar di LA, Joshua adalah gentleman bersuara lembut dengan fresh smile. Jangan terkecoh penampilannya yang santun, dia sering melakukan kekonyolan spontan yang unexpected!', 'images/joshua.jpg')">
+        <div class="card-image">
+          <img src="images/joshua.jpg" alt="Joshua">
+          <span class="unit-badge">Vocal</span>
+        </div>
+        <div class="card-info">
+          <h3>Joshua 🐰</h3>
+          <p>Gentleman Vokal</p>
+        </div>
+      </div>
+
+      <!-- 4. JUN -->
+      <div class="member-card performance" onclick="openDrawer('Jun', 'Wen Junhui', 'Performance Team', '10 Juni 1996', '🐱', 'Mantan aktor cilik asal Tiongkok dengan keahlian martial arts/wushu. Memiliki ekspresi visual yang sangat kuat di panggung namun sangat polos, ramah, dan penuh kejutan di kehidupan sehari-hari.', 'images/jun.jpg')">
+        <div class="card-image">
+          <img src="images/jun.jpg" alt="Jun">
+          <span class="unit-badge">Performance</span>
+        </div>
+        <div class="card-info">
+          <h3>Jun 🐱</h3>
+          <p>Visual Dancer</p>
+        </div>
+      </div>
+
+      <!-- 5. HOSHI -->
+      <div class="member-card performance" onclick="openDrawer('Hoshi', 'Kwon Soonyoung', 'Performance Team (Leader)', '15 Juni 1996', '🐯', 'Captain Horanghae! Otak di balik sebagian besar koreografi presisi SEVENTEEN. Hoshi punya energi tak terbatas di atas panggung dan ambisi Harimau yang sangat tinggi.', 'images/hoshi.jpg')">
+        <div class="card-image">
+          <img src="images/hoshi.jpg" alt="Hoshi">
+          <span class="unit-badge">Performance</span>
+        </div>
+        <div class="card-info">
+          <h3>Hoshi 🐯</h3>
+          <p>Performance Master</p>
+        </div>
+      </div>
+
+      <!-- 6. WONWOO -->
+      <div class="member-card hiphop" onclick="openDrawer('Wonwoo', 'Jeon Wonwoo', 'Hip-Hop Team', '17 Juli 1996', '🦊', 'Rapper bersuara deep yang calm and soft boy. Sangat gemar membaca buku, bermain game, serta fotografi. Jangan tertipu dengan diamnya, karena dia diam-diam menghanyutkan.', 'images/wonwoo.jpg')">
+        <div class="card-image">
+          <img src="images/wonwoo.jpg" alt="Wonwoo">
+          <span class="unit-badge">Hip-Hop</span>
+        </div>
+        <div class="card-info">
+          <h3>Wonwoo 🦊</h3>
+          <p>Deep Voice Rapper</p>
+        </div>
+      </div>
+
+      <!-- 7. WOOZI -->
+      <div class="member-card vocal" onclick="openDrawer('Woozi', 'Lee Jihoon', 'Vocal Team (Leader)', '22 November 1996', '🍚', 'Produser musik jenius yang memproduksi ratusan lagu SEVENTEEN. Sosok pekerja keras yang dingin di luar namun memiliki hati yang sangat hangat dan lembut.', 'images/woozi.jpg')">
+        <div class="card-image">
+          <img src="images/woozi.jpg" alt="Woozi">
+          <span class="unit-badge">Vocal</span>
+        </div>
+        <div class="card-info">
+          <h3>Woozi 🍚</h3>
+          <p>Genius Producer</p>
+        </div>
+      </div>
+
+      <!-- 8. THE8 -->
+      <div class="member-card performance" onclick="openDrawer('The8', 'Xu Minghao', 'Performance Team', '7 November 1997', '🐸', 'Pakar fashion, seni lukis, dan B-boying asal Tiongkok. Dikenal memiliki pemikiran hidup yang sangat dewasa, tenang, bijaksana, serta outfit yang selalu stylist.', 'images/the8.jpg')">
+        <div class="card-image">
+          <img src="images/the8.jpg" alt="The8">
+          <span class="unit-badge">Performance</span>
+        </div>
+        <div class="card-info">
+          <h3>The8 🐸</h3>
+          <p>Fashion & Dance Icon</p>
+        </div>
+      </div>
+
+      <!-- 9. MINGYU -->
+      <div class="member-card hiphop" onclick="openDrawer('Mingyu', 'Kim Mingyu', 'Hip-Hop Team', '6 April 1997', '🐶', 'Visual bertubuh tinggi atletis yang serba bisa. Mulai dari memasak porsi besar untuk 13 member, bertukang, fotografi, hingga rap, semuanya bisa dia lakukan!', 'images/mingyu.jpg')">
+        <div class="card-image">
+          <img src="images/mingyu.jpg" alt="Mingyu">
+          <span class="unit-badge">Hip-Hop</span>
+        </div>
+        <div class="card-info">
+          <h3>Mingyu 🐶</h3>
+          <p>All-Rounder Visual</p>
+        </div>
+      </div>
+
+      <!-- 10. DK -->
+      <div class="member-card vocal" onclick="openDrawer('DK (Dokyeom)', 'Lee Seokmin', 'Vocal Team', '18 Februari 1997', '🍕', 'Main Vocalist dengan jangkauan suara emas yang sangat kuat. Memiliki kepribadian sangat ceria bagaikan sinar matahari dan selalu berhasil menghidupkan suasana Seventeen.', 'images/dk.jpg')">
+        <div class="card-image">
+          <img src="images/dk.jpg" alt="DK">
+          <span class="unit-badge">Vocal</span>
+        </div>
+        <div class="card-info">
+          <h3>DK 🍕</h3>
+          <p>Sunshine Main Vocal</p>
+        </div>
+      </div>
+
+      <!-- 11. SEUNGKWAN -->
+      <div class="member-card vocal" onclick="openDrawer('Seungkwan', 'Boo Seungkwan', 'Vocal Team', '16 Januari 1998', '🍊', 'Powerhouse Vocalist sekaligus King of Variety Show yang diakui publik industri hiburan Korea. Sangat emosional, perhatian, ramah, dan pintar mencairkan suasana.', 'images/seungkwan.jpg')">
+        <div class="card-image">
+          <img src="images/seungkwan.jpg" alt="Seungkwan">
+          <span class="unit-badge">Vocal</span>
+        </div>
+        <div class="card-info">
+          <h3>Seungkwan 🍊</h3>
+          <p>Variety & Vocal King</p>
+        </div>
+      </div>
+
+      <!-- 12. VERNON -->
+      <div class="member-card hiphop" onclick="openDrawer('Vernon', 'Hansol Vernon Chwe', 'Hip-Hop Team', '18 Februari 1998', '🐻', 'Rapper santai berkharisma dengan jiwa seni bebas. Memiliki pemikiran yang unik, selera musik beragam. Jangan tertipu dengan tampak bulenya, dia sebenarnya baru belajar Bahasa Inggris diKorea.', 'images/vernon.jpg')">
+        <div class="card-image">
+          <img src="images/vernon.jpg" alt="Vernon">
+          <span class="unit-badge">Hip-Hop</span>
+        </div>
+        <div class="card-info">
+          <h3>Vernon 🐻</h3>
+          <p>Chill Rapper</p>
+        </div>
+      </div>
+
+      <!-- 13. DINO -->
+      <div class="member-card performance" onclick="openDrawer('Dino', 'Lee Chan', 'Performance Team', '11 Februari 1999', '🦦', 'Maknae (member termuda) serba bisa yang menjadi kebanggaan 12 kakak-kakaknya. Bakat menarinya luar biasa presisi dan semangat belajarnya sangat tinggi.', 'images/dino.jpg')">
+        <div class="card-image">
+          <img src="images/dino.jpg" alt="Dino">
+          <span class="unit-badge">Performance</span>
+        </div>
+        <div class="card-info">
+          <h3>Dino 🦦</h3>
+          <p>Future of K-Pop</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: MUST WATCH GOING SEVENTEEN (WITH FACTS & YT LINKS) -->
+  <section id="gose" class="section-container">
+    <div class="section-header">
+      <div>
+        <span class="sub-tag">STARTER PACK</span>
+        <h2>Wajib Tonton!!🎬</h2>
+      </div>
+    </div>
+
+    <div class="gose-grid">
+      <div class="gose-card">
+        <span class="gose-tag">🔥 TTT Series</span>
+        <h3>Two Track Trip (TTT)</h3>
+        <p class="gose-desc">Liburan bebas para member tanpa skrip. Kamu bakal lihat seberapa kompak & gilanya kekeluargaan mereka saat bersenang-senang.</p>
+        <div class="gose-fact">
+          💡 <strong>Fun Fact:</strong> TTT adalah episode paling ampuh yang bikin jutaan non-fans langsung jatuh cinta sama SEVENTEEN!
+        </div>
+        <a href="https://www.youtube.com/results?search_query=going+seventeen+ttt" target="_blank" class="gose-link">Tonton di YouTube ▶</a>
+      </div>
+
+      <div class="gose-card">
+        <span class="gose-tag">🧩 Don't Lie</span>
+        <h3>Don't Lie Series (1-4)</h3>
+        <p class="gose-desc">Perpaduan Game Mafia + Berburu Harta Karun. Penuh intrik, saling tuduh, dan aksi lisensi licik Jeonghan!</p>
+        <div class="gose-fact">
+          💡 <strong>Fun Fact:</strong> Konsep ini sangat populer sampai selalu dibuatkan sekuel rutin tiap tahun oleh tim GoSe!
+        </div>
+        <a href="https://www.youtube.com/results?search_query=going+seventeen+dont+lie" target="_blank" class="gose-link">Tonton di YouTube ▶</a>
+      </div>
+
+      <div class="gose-card">
+        <span class="gose-tag">👻 Ego & The Tag</span>
+        <h3>The Tag / Ego</h3>
+        <p class="gose-desc">Episode rumah hantu paling ikonik. Bukan cuma menakutkan, tapi tingkah panik para member bikin ngakak guling-guling.</p>
+        <div class="gose-fact">
+          💡 <strong>Fun Fact:</strong> Ada legenda hantu nyata di lokasi syuting 'The Tag' yang bikin episode ini makin viral di kalangan netizen!
+        </div>
+        <a href="https://www.youtube.com/results?search_query=going+seventeen+the+tag" target="_blank" class="gose-link">Tonton di YouTube ▶</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIDE DRAWER PROFIL MEMBER -->
+  <div id="drawer-overlay" class="drawer-overlay" onclick="closeDrawer()"></div>
+  <aside id="member-drawer" class="side-drawer">
+    <button class="close-drawer-btn" onclick="closeDrawer()">&times;</button>
+    <div class="drawer-header">
+      <div class="drawer-img-container">
+        <img id="drawer-img" src="" alt="Member">
+      </div>
+      <h2 id="drawer-name">Name</h2>
+      <span id="drawer-unit" class="drawer-unit-badge">Unit</span>
+    </div>
+    <div class="drawer-body">
+      <div class="info-row">
+        <span>Nama Asli</span>
+        <strong id="drawer-realname">-</strong>
+      </div>
+      <div class="info-row">
+        <span>Tanggal Lahir</span>
+        <strong id="drawer-dob">-</strong>
+      </div>
+      <div class="info-box">
+        <h4>Fun facts:</h4>
+        <p id="drawer-fact">-</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- POP-UP RESULT DADU -->
+  <div id="bias-modal" class="modal-overlay" onclick="closeBiasModal()">
+    <div class="bias-card-pop" onclick="event.stopPropagation()">
+      <span class="bias-tag">✨ MATCH RESULT ✨</span>
+      <div class="bias-avatar">
+        <img id="bias-modal-img" src="" alt="Bias">
+      </div>
+      <h2 id="bias-modal-name">Member Name</h2>
+      <p id="bias-modal-desc" style="color: var(--text-muted); margin: 10px 0 20px;">Deskripsi kecocokan...</p>
+      <button class="btn btn-gradient" onclick="closeBiasModal()">💎</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 CARAT LAND • Designed with love for RPL Project</p>
+  </footer>
+
+  <script src="java.js"></script>
+</body>
+</html>
